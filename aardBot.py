@@ -10,7 +10,7 @@ config = configparser.ConfigParser()
 config._interpolation = configparser.ExtendedInterpolation()
 config.read('config.ini')
 
-keywords = ['animal','žival','kafshë','	жывёла','životinja','животно','životinja','zvíře','	dyr','loom','eläin','Tier',
+keywords = ['animal','žival','kafshë','	жывёла','životinja','животно','životinja','zvíře','	dyr','eläin','Tier',
 'ζώο','állat','ainmhithe','dzīvnieks','gyvūnas','животните','annimali''zwierzę','животное','животиња','zviera','djur','тварина'
 'anifeiliaid','כייַע', '@nim@a1']
 keywordsStr = ", ".join(keywords)		 
