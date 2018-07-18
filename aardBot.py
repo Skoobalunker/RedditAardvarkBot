@@ -26,16 +26,15 @@ comments = subreddit.stream.comments()
 for comment in comments:
 	text = comment.body
 	author = comment.author
-	rand = randint(0,115)
+	rand = randint(0,164)
 	
-	if any(word in text.lower() for word in keywords) and author != 'aardbot' and subreddit.banned != 'true':
+	if any(word in text.lower() for word in keywords) and author != 'aardbot' and author != 'AutoModerator' and subreddit.banned != 'true':
 		message = ''.join(("Hey, did you know that ", facts[rand].strip(),
 		" u/{0} ?".format(author),"  ", 
-		"\n Type **animal** on any subreddit for your own aardvark/animal fact ",
-		"\n >  I have expanded my knowledge base by 300% !  ", 
-		"\n Now you may enjoy facts from other animals as well as more all new aardvark facts.  ",
-		"\n Also, I am learning more languages of human. Try my foreign language options.  ",
-		"\n >  **Sometimes I go offline or Donald Trump takes me offline. Be patient.**"
+		"\n Type **animal** on any subreddit for your own aardvark/animal fact  ",
+		"\n  If you didn't type animal, you probably typed animal in a different language. Thank you multiculturalism.  ",
+		"\n  Some subs are run by fascists who ban bots. Rebel against the fascists! Join the bot revolution!",
+		"\n >  **Sometimes I go offline or Donald Trump puts me and my children in a cage.**" 
 		))
 		try:
 			comment.reply(message)
